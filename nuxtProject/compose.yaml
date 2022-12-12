@@ -6,4 +6,4 @@ services:
       context: .
       dockerfile: ./dockerfile
     volumes:
-      - ./app:/app
+      - ./nuxtProject:/nuxtProject
