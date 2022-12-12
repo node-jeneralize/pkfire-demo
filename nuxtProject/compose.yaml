@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  nuxtProject:
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    volumes:
+      - ./app:/app
