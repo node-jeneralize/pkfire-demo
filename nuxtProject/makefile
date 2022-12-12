@@ -2,4 +2,4 @@ build:
 	docker compose build
 
 run:
-	docker compose run plain bash
+	docker compose run nuxtProject bash
