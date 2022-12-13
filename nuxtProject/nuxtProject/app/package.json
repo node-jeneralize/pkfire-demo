@@ -6,7 +6,15 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "typeCheck": "tsc --noEmit",
+    "lint:js": "eslint --ext .js,.ts .",
+    "lint:js:fix": "eslint --fix --ext .js,.ts .",
+    "lint:code": "prettier .",
+    "lint:code:fix": "prettier --write .",
+    "test": "jest",
+    "lint": "npm run lint:js && npm run lint:code",
+    "lint:fix": "npm run lint:js:fix && npm run lint:code:fix"
   },
   "dependencies": {
     "core-js": "^3.25.3",
@@ -16,7 +24,21 @@
     "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
     "@nuxt/types": "^2.15.8",
-    "@nuxt/typescript-build": "^2.1.0"
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "@types/jest": "^29.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "jest": "^29.3.1",
+    "prettier": "^2.8.1",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1"
   }
 }

@@ -1,0 +1,19 @@
+name: test
+on:
+  pull_request:
+    paths:
+      - src/**/*
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: using node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.12.1
+      - name: module install
+        run: npm ci
+      - name: running test
+        run: npm run test

@@ -1,0 +1,14 @@
+root: true
+env:
+  es6: true
+  node: true
+  browser: true
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:nuxt/recommended
+  - "@nuxtjs/eslint-config-typescript"
+  - prettier
+plugins:
+  - "@typescript-eslint"
+parser: "@typescript-eslint/parser"

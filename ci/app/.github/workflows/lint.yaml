@@ -1,0 +1,22 @@
+name: lint
+on:
+  pull_request:
+    paths:
+      - src/**/*
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: using node 16.13.0
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.12.1
+      - name: module install
+        run: npm ci
+      - name: lint check
+        uses: reviewdog/action-eslint@v1
+        with:
+          repoter: github-pr-review
+          eslint-flags: --ext .js,.ts src
